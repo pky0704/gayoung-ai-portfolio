@@ -1,0 +1,117 @@
+[
+  {
+    "id": "00000000-0000-4000-8000-000000000001",
+    "slug": "menu-finder",
+    "title": "외국인 메뉴 도우미",
+    "summary": "낯선 메뉴 앞에서, 선택을 조금 더 쉽게.",
+    "category": "고객 편의 · 다국어 메뉴 탐색",
+    "status": "교육용 프로토타입 · 샘플 메뉴 8개",
+    "url": "https://gayoungene-menu-finder.ghghgh0704.chatgpt.site",
+    "cover": "/covers/menu-finder.svg",
+    "screenshots": [
+      "/captures/menu-finder.jpg"
+    ],
+    "capture_note": "실제 사이트 화면 · 대표 구간",
+    "captured_at": "2026-09-22T16:20:59.720496+00:00",
+    "problem": "외국인 손님이 낯선 메뉴의 재료와 매운맛을 이해하고 선택할 수 있도록 만들었습니다.",
+    "steps": "언어 선택\n피하고 싶은 재료와 매운맛 선택\n메뉴 목록과 상세 정보 확인",
+    "process": "가영이네 운영 중 발견한 문제를 바탕으로 AI와 함께 기획·제작한 프로젝트입니다. 세부 제작 기간과 기술 구현 내역은 확인 후 보강합니다.",
+    "scope": "규칙 기반으로 샘플 메뉴를 탐색합니다. 가격·재료·매운맛은 테스트 데이터이며 실제 주문과 결제는 매장 주문 수단에서 진행합니다. 화면의 인테리어 이미지는 AI 예시이며 실제 매장 사진이 아닙니다.",
+    "next": "실제 메뉴 정보와 번역을 검수하고 음식 사진을 보강하기",
+    "visibility": "published",
+    "sort_order": 10,
+    "updated_at": null
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000002",
+    "slug": "brand-studio",
+    "title": "우리 가게 브랜드 도우미",
+    "summary": "공지 하나를 만들어도, 우리 가게 스타일로.",
+    "category": "브랜드 관리 · 콘텐츠 프롬프트",
+    "status": "공개 프로토타입",
+    "url": "https://brand-prompt-studio.ghghgh0704.chatgpt.site",
+    "cover": "/covers/brand-studio.svg",
+    "screenshots": [
+      "/captures/brand-studio.jpg"
+    ],
+    "capture_note": "실제 사이트 화면 · 대표 구간",
+    "captured_at": "2026-09-22T16:20:59.721318+00:00",
+    "problem": "공지나 홍보물을 만들 때마다 우리 가게의 분위기와 기준을 다시 설명하는 번거로움에서 시작했습니다.",
+    "steps": "브랜드 가이드 준비\n수정할 콘텐츠와 변경 내용 입력\n준비된 프롬프트를 개인 AI에서 실행",
+    "process": "가영이네 운영 중 발견한 문제를 바탕으로 AI와 함께 기획·제작한 프로젝트입니다. 세부 제작 기간과 기술 구현 내역은 확인 후 보강합니다.",
+    "scope": "브랜드 기준과 수정 요청을 프롬프트로 정리합니다. 이미지 제작은 개인 AI에서 진행하며 이 사이트는 입력 내용을 서버에 저장하지 않습니다.",
+    "next": "실제 제작물과 브랜드 기준을 대조하며 프롬프트 개선하기",
+    "visibility": "published",
+    "sort_order": 20,
+    "updated_at": null
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000003",
+    "slug": "competitor-analysis",
+    "title": "배달앱 경쟁가게 분석",
+    "summary": "옆 가게를 살펴보고, 우리 가게의 다음 행동 찾기.",
+    "category": "가게 운영 · 경쟁 분석",
+    "status": "사례 데이터 기반 데모",
+    "url": "https://gayoungene-competitor-ai.ghghgh0704.chatgpt.site",
+    "cover": "/covers/competitor-analysis.svg",
+    "screenshots": [
+      "/captures/competitor-analysis.jpg"
+    ],
+    "capture_note": "실제 사이트 화면 · 대표 구간",
+    "captured_at": "2026-09-22T16:20:59.721503+00:00",
+    "problem": "경쟁가게를 살펴보는 데서 멈추지 않고 우리 가게에서 실행할 일을 정리하고 싶었습니다.",
+    "steps": "가영이네 데모 시작\n경쟁가게 비교 항목 확인\n우선 행동과 2주 실행 계획 검토",
+    "process": "가영이네 운영 중 발견한 문제를 바탕으로 AI와 함께 기획·제작한 프로젝트입니다. 세부 제작 기간과 기술 구현 내역은 확인 후 보강합니다.",
+    "scope": "준비된 가영이네 사례를 사용하는 데모입니다. 업로드한 화면을 OCR로 읽거나 실시간으로 자동 분석하는 기능이 완성되었다는 의미는 아닙니다. 공식 배달의민족 서비스가 아닙니다.",
+    "next": "실제 입력 자료와 분석 결과를 연결하는 기능 검증하기",
+    "visibility": "published",
+    "sort_order": 30,
+    "updated_at": null
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000004",
+    "slug": "voice-recipe",
+    "title": "음성 레시피 정리",
+    "summary": "말로 설명한 조리법을, 다시 꺼내 볼 레시피로.",
+    "category": "레시피 기록 · 음성 정리",
+    "status": "테스트 계정 로그인 필요",
+    "url": "https://voice-recipe-mvp.ghghgh0704.chatgpt.site",
+    "cover": "/covers/voice-recipe.svg",
+    "screenshots": [
+      "/captures/voice-recipe.jpg"
+    ],
+    "capture_note": "실제 로그인 화면",
+    "captured_at": "2026-09-22T16:20:59.721686+00:00",
+    "problem": "말로 전해지는 조리법을 다시 확인하고 고칠 수 있는 기록으로 남기고 싶었습니다.",
+    "steps": "테스트 사이트 접속\n전달받은 테스트 계정으로 로그인",
+    "process": "가영이네 운영 중 발견한 문제를 바탕으로 AI와 함께 기획·제작한 프로젝트입니다. 세부 제작 기간과 기술 구현 내역은 확인 후 보강합니다.",
+    "scope": "외부에서 확인한 화면은 로그인 화면입니다. 내부 녹음·변환·편집 기능의 동작은 이번 확인에 포함하지 않았습니다. 테스트 계정은 공개하지 않습니다.",
+    "next": "내부 사용 흐름을 검증하고 공개 가능한 실제 화면 보강하기",
+    "visibility": "published",
+    "sort_order": 40,
+    "updated_at": null
+  },
+  {
+    "id": "00000000-0000-4000-8000-000000000005",
+    "slug": "review-helper",
+    "title": "가영이네 리뷰 도우미",
+    "summary": "직접 경험한 맛과 순간을, 글로 옮기기 쉽게.",
+    "category": "고객 편의 · 리뷰 작성 지원",
+    "status": "공개 리뷰 작성 지원 도구",
+    "url": "https://gayoung-review-helper.ghghgh0704.chatgpt.site",
+    "cover": "/covers/review-helper.svg",
+    "screenshots": [
+      "/captures/review-helper.jpg"
+    ],
+    "capture_note": "실제 사이트 화면 · 대표 구간",
+    "captured_at": "2026-09-22T16:20:59.721820+00:00",
+    "problem": "맛있게 드신 경험이 있어도 리뷰의 첫 문장이 막막한 손님을 돕기 위해 만들었습니다.",
+    "steps": "먹은 메뉴와 실제 느낀 점 선택\n문장 길이와 말투 선택\n초안을 확인하고 수정·복사\n고객이 직접 리뷰 게시",
+    "process": "가영이네 운영 중 발견한 문제를 바탕으로 AI와 함께 기획·제작한 프로젝트입니다. 세부 제작 기간과 기술 구현 내역은 확인 후 보강합니다.",
+    "scope": "규칙·템플릿 기반의 리뷰 초안 작성 흐름입니다. 실시간 AI API 사용은 확인하지 않았으며 자동 게시하지 않습니다. 방문자의 실제 경험만 선택합니다.",
+    "next": "실제 사용 의견을 바탕으로 메뉴 선택과 문장 표현 다듬기",
+    "visibility": "published",
+    "sort_order": 50,
+    "updated_at": null
+  }
+]

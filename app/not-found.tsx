@@ -1,0 +1,1 @@
+import Link from 'next/link'; export default function NotFound(){return <main id="main" className="shell empty"><p className="eyebrow">404 / NOT FOUND</p><h1>아직 없는 기록이에요.</h1><p>주소가 바뀌었거나 공개되지 않은 프로젝트입니다.</p><Link className="primary" href="/#projects">프로젝트 목록으로 →</Link></main>}

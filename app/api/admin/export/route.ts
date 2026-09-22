@@ -1,0 +1,3 @@
+import {NextResponse} from 'next/server';
+import {authorize} from '@/lib/supabase';
+export async function GET(req:Request){const db=await authorize(req);if(!db)return NextResponse.json({error:'관리자 로그인이 필요합니다.'},{status:401});const {data,error}=await db.from('projects').select('*').order('sort_order');if(error)return NextResponse.json({error:'내보내기에 실패했습니다.'},{status:503});return new Response(JSON.stringify({version:1,exported_at:new Date().toISOString(),projects:data},null,2),{headers:{'Content-Type':'application/json; charset=utf-8','Content-Disposition':'attachment; filename="gayoung-projects.json"','Cache-Control':'no-store'}});}
