@@ -25,3 +25,5 @@
 .phoneFrame iframe{width:390px;height:717px;transform:scale(.6974358974);transform-origin:top left;border-radius:23px}
 @media(max-width:700px){.phoneMock{width:286px;max-width:100%}.phoneFrame iframe{height:717px}}
 @media(max-width:360px){.phoneMock{width:266px}.phoneFrame{height:494px}.phoneFrame iframe{transform:scale(.6461538462)}}
+.timeline li>span{flex-shrink:0;min-width:32px;white-space:nowrap}
+@media(min-width:701px){.showcaseInner{min-height:890px}.phoneMock figcaption{margin-top:80px}}
