@@ -1,6 +1,6 @@
 # 포트폴리오 상세페이지 공통 구성
 
-첫 적용: `/projects/online-prepay`. 다른 프로젝트 상세페이지는 기존 구성을 유지합니다.
+선결제 샘플 승인 후 전체 6개 프로젝트에 적용했습니다. 선결제 전용 구성은 유지하고 나머지 5개는 공통 컴포넌트와 프로젝트별 콘텐츠로 구성합니다.
 
 ## 편집 기준
 
@@ -34,9 +34,16 @@
 
 ## 편집 위치
 
-- 섹션과 설명: `components/PrepayCaseStudy.tsx`
+- 공통 섹션: `components/ProjectCaseStudy.tsx`
+- 프로젝트별 문구·색상·사용 예시: `lib/case-studies.ts`
+- 이미지 크기: `lib/case-study-images.json`
+- 공통 반응형 스타일: `components/ProjectCaseStudy.module.css`
+- 입력·결과 예시 전환: `components/ProjectExample.tsx`
+- 선결제 전용 섹션과 설명: `components/PrepayCaseStudy.tsx`
 - 반응형 스타일: `components/PrepayCaseStudy.module.css`
 - 적립 계산 예시: `components/PrepayAmountDemo.tsx`
 - 제목·사이트 URL·공개 상태: 기존 프로젝트 데이터 경로 유지
 
-현재 샘플의 확장 섹션은 코드로 편집합니다. 기존 관리자 폼에 새 섹션 편집 기능이 추가된 것은 아닙니다. 전체 프로젝트에 확장할 때 섹션별 콘텐츠와 이미지 필드를 데이터 모델로 옮길 수 있습니다.
+확장 섹션은 코드로 편집합니다. 제목·실제 사이트 URL·공개 상태·문제·현재 범위·다음 단계는 기존 프로젝트 데이터에서 가져옵니다. 기존 관리자 폼에 새 섹션 편집 기능은 추가하지 않았습니다.
+
+음성 레시피는 로그인 화면까지 확인했으며 내부 동작을 검증한 것처럼 소개하지 않습니다. 경쟁 분석은 사례 데이터 데모, 리뷰 예시는 기능 확인용 가상 선택임을 명시합니다. 성과 수치나 개발 일정을 임의로 추가하지 않습니다.
