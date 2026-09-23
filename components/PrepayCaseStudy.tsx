@@ -34,7 +34,6 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
           <div className={s.phoneFrame}><div className={s.phoneSpeaker} aria-hidden="true"/><iframe src={p.url} title="가영이네 선결제 실제 모바일 화면 체험" loading="lazy" sandbox="allow-scripts allow-same-origin" referrerPolicy="strict-origin-when-cross-origin"/></div>
           <figcaption>모바일 · 실제 사이트<br/>화면 안에서 스크롤해 보세요.</figcaption>
         </figure>
-        <p className={s.showcaseNote}>한눈에 보는 혜택.<br/>순서대로 작성하는 신청서.</p>
       </div>
     </section>
 
