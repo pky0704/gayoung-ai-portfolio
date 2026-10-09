@@ -19,7 +19,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
       <div className={s.back}><Back slug={p.slug}/><span>매장에서 시작한 디지털 실험</span></div>
       <section className={s.hero} aria-labelledby="case-title"><SchoolTag slug={p.slug}/>
         <p className={s.eyebrow}><span className={s.dot}/> GAYOUNGINE · PREPAY</p>
-        <div className={s.heroHeading}><h1 id="case-title">종이 장부에서,<br/><em>온라인 신청으로.</em></h1><div className={s.heroCopy}><p>{p.title}</p><p>단골의 한 끼를 미리 준비하는 방법.<br/>매장에서 쓰던 선결제 장부를<br/>쉽게 이해하고 신청하는 화면으로 옮겼습니다.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">현재 선결제 사이트 보기 <span>↗</span></a></div></div>
+        <div className={s.heroHeading}><h1 id="case-title">가영이네<br/><em>선결제 신청</em></h1><div className={s.heroCopy}><p>{p.title}</p><p>방문 전에도 선결제를 신청하고<br/>추가 적립 금액을 확인합니다.<br/>결제 확인과 충전은 사장님이 진행합니다.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">현재 선결제 사이트 보기 <span>↗</span></a></div></div>
         <div className={s.metadata}><span>개인 고객 · 부서 공동 이용</span><span>반응형 웹</span><span className={s.demoBadge}>신청 접수 운영 · 결제·충전 별도</span></div>
       </section>
       <ProjectUpdate slug={p.slug}/>
@@ -27,7 +27,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
 
     <section className={s.showcase} aria-label="PC와 모바일에서 보는 선결제 사이트">
       <div className={s.showcaseInner}>
-        <div className={s.showcaseLabel}><span>THE SERVICE, AT A GLANCE</span><span>미리 채우고, 편하게 드세요.</span></div>
+        <div className={s.showcaseLabel}><span>초기 제작 화면 · 2026년 9월</span><span>미리 채우고, 편하게 드세요.</span></div>
         <figure className={s.desktopMock}>
           <div className={s.browserBar}><span aria-hidden="true">● ● ●</span><span>가영이네 선결제</span><span aria-hidden="true">↗</span></div>
           <Image src={asset+'desktop.webp'} alt="가영이네 선결제 실제 PC 화면. 왼쪽은 적립 혜택, 오른쪽은 개인·부서 이용 신청서입니다." width={1348} height={926} priority sizes="(max-width: 700px) 92vw, 850px"/>
@@ -44,7 +44,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
 
     <div className={s.container}>
       <section id="prepay-why" className={s.section}>
-        <Chapter number="01" label="BACKGROUND" title={<>가게에서는 익숙한 일.<br/>손님에게는 번거로운 일.</>}>선결제를 하려면 매장에 들러 종이 장부를 작성해야 했습니다. 기관·부서와 단골 고객이 신청하는 과정을 더 편하게 만들고 싶었습니다.</Chapter>
+        <Chapter number="01" label="BACKGROUND" title={<>선결제 신청에<br/>방문과 종이 장부가 필요했습니다.</>}>선결제를 하려면 매장에 들러 종이 장부를 작성해야 했습니다. 기관·부서와 단골 고객이 신청하는 과정을 더 편하게 만들고 싶었습니다.</Chapter>
         <div className={s.contextGrid}>
           <figure className={s.contextPhoto}><Image src={asset+'notebook.webp'} alt="우드 테이블에 놓인 종이 노트와 필기구. 수기 기록 상황을 설명하는 참고 사진" width={2200} height={1467} sizes="(max-width: 700px) 92vw, 540px"/><figcaption>수기 기록의 맥락을 보여주는 참고 이미지</figcaption></figure>
           <div className={s.problemList}><div><span>01</span><h3>방문해야 시작되는 신청</h3><p>선결제 신청을 위해 따로 매장을 찾는 번거로움.</p></div><div><span>02</span><h3>다시 확인해야 하는 정보</h3><p>신청자와 실제 포인트를 사용할 사람이 다를 수 있다는 점.</p></div><div><span>03</span><h3>말로 설명하던 적립 혜택</h3><p>금액에 따라 달라지는 추가 적립을 눈으로 확인할 필요.</p></div></div>
@@ -53,7 +53,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
       </section>
 
       <section className={s.section} aria-labelledby="solution-title">
-        <Chapter number="02" label="THE APPROACH" title={<span id="solution-title">신청은 쉽게.<br/>확인은 분명하게.</span>}>운영 과정에서 확인해야 할 정보를, 화면의 순서와 역할로 풀었습니다.</Chapter>
+        <Chapter number="02" label="THE APPROACH" title={<span id="solution-title">온라인 신청서에<br/>필요한 정보를 모았습니다.</span>}>운영 과정에서 확인해야 할 정보를, 화면의 순서와 역할로 풀었습니다.</Chapter>
         <div className={s.solutionGrid}>
           <article><div className={s.solutionGraphic} aria-hidden="true"><span className={s.paperIcon}>이름 ______<br/>번호 ______<br/>금액 ______</span><span>→</span><span className={s.digitalIcon}>선택<br/>입력<br/><b>확인 ✓</b></span></div><h3>장부 → 온라인 신청서</h3><p>개인과 부서의 이용 방식을 먼저 선택하고 필요한 정보를 입력합니다.</p></article>
           <article><div className={s.solutionGraphic} aria-hidden="true"><span className={s.personIcon}>신청자</span><span>→</span><span className={s.targetIcon}>충전 대상</span></div><h3>신청자와 충전 대상 구분</h3><p>신청하는 사람과 포인트를 사용할 번호를 따로 확인할 수 있게 합니다.</p></article>
@@ -62,7 +62,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
       </section>
 
       <section id="prepay-design" className={`${s.section} ${s.designSection}`}>
-        <Chapter number="03" label="SCREEN DESIGN" title={<>한 화면 안에서,<br/>무엇을 해야 할지 알 수 있도록.</>}>혜택을 이해하는 영역과 신청하는 영역을 나누고, 중요한 선택부터 차례대로 배치했습니다.</Chapter>
+        <Chapter number="03" label="SCREEN DESIGN" title={<>금액 확인부터 정보 입력까지<br/>신청 순서대로 배치했습니다.</>}>혜택을 이해하는 영역과 신청하는 영역을 나누고, 중요한 선택부터 차례대로 배치했습니다.</Chapter>
         <div className={s.featureLayout}>
           <div className={s.featureScreen}><Image src={asset+'form.webp'} alt="실제 신청서 확대 화면: 개인·부서 선택, 신청자 정보, 충전 대상 번호, 선결제 금액 선택" width={610} height={730} sizes="(max-width: 700px) 88vw, 540px"/><span className={`${s.marker} ${s.markerOne}`}>1</span><span className={`${s.marker} ${s.markerTwo}`}>2</span><span className={`${s.marker} ${s.markerThree}`}>3</span></div>
           <div className={s.featureNotes}><article><span>1</span><div><h3>나 혼자, 또는 우리 부서 함께</h3><p>첫 선택에서 이용 목적을 구분해 이후 입력의 맥락을 잡습니다.</p></div></article><article><span>2</span><div><h3>포인트를 쓸 번호를 분명하게</h3><p>충전 대상 번호를 별도 항목으로 두고, 같을 때는 ‘신청자와 같아요’로 간단히 처리합니다.</p></div></article><article><span>3</span><div><h3>자주 쓰는 금액은 한 번에</h3><p>금액 버튼으로 빠르게 선택하고, 직접 입력도 할 수 있습니다.</p></div></article><div className={s.designPrinciple}><span>DESIGN LANGUAGE</span><p><i aria-hidden="true"/>오렌지는 혜택과 주요 행동에.<br/>흰 여백은 정보를 구분하는 데.</p></div></div>
