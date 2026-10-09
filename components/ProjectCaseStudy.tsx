@@ -1,3 +1,5 @@
+import ProjectUpdate from './ProjectUpdate';
+import SchoolTag from './SchoolTag';
 import Image from 'next/image';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
@@ -14,7 +16,7 @@ export default function ProjectCaseStudy({project:p,study:c,nextProject}:{projec
  return <main id="main" className={`${s.page} ${s[c.theme]}`}>
   <div className={s.container}>
    <div className={s.back}><Back slug={p.slug}/><span>매장에서 시작한 디지털 실험</span></div>
-   <section className={s.hero} aria-labelledby="case-title"><p className={s.eyebrow}>{c.eyebrow}</p><div className={s.heroHeading}><h1 id="case-title">{c.headline[0]}<br/><em>{c.headline[1]}</em></h1><div className={s.heroCopy}><p>{p.title}</p><p>{c.lead}</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">{c.cta} ↗</a></div></div><div className={s.metadata}><span>{c.audience}</span><span>웹 프로토타입</span><span>{p.status}</span></div></section>
+   <ProjectUpdate slug={p.slug}/><section className={s.hero} aria-labelledby="case-title"><SchoolTag slug={p.slug}/><p className={s.eyebrow}>{c.eyebrow}</p><div className={s.heroHeading}><h1 id="case-title">{c.headline[0]}<br/><em>{c.headline[1]}</em></h1><div className={s.heroCopy}><p>{p.title}</p><p>{c.lead}</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">{c.cta} ↗</a></div></div><div className={s.metadata}><span>{c.audience}</span><span>웹 프로토타입</span><span>{p.status}</span></div></section>
   </div>
   <section className={s.showcase} aria-label={`${p.title} PC와 모바일 화면`}><div className={s.container}><div className={s.showcaseLabel}><span>THE SERVICE, AT A GLANCE</span><span>{p.title}</span></div><div className={s.devices}><figure className={s.desktop}><div className={s.browserBar}><span aria-hidden="true">● ● ●</span><span>{p.title}</span><span aria-hidden="true">↗</span></div><Image src={asset+'desktop.webp'} alt={`${p.title} 실제 공개 사이트 첫 화면`} {...size.desktop} priority sizes="(max-width: 700px) 92vw, 800px"/><figcaption>PC · 실제 공개 화면</figcaption></figure><figure className={s.phone}><div className={s.phoneFrame}><iframe src={p.url} title={`${p.title} 모바일 화면 체험`} loading="lazy" sandbox="allow-scripts allow-same-origin" referrerPolicy="strict-origin-when-cross-origin"/></div><figcaption>모바일 · 실제 사이트<br/>화면 안에서 스크롤해 보세요.</figcaption></figure></div></div></section>
   <nav className={s.sectionNav} aria-label="제작 이야기 목차"><div className={s.container}><a href="#case-why">만든 이유</a><a href="#case-design">화면 설계</a><a href="#case-guide">사용 방법</a><a href="#case-making">제작 과정</a></div></nav>

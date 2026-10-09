@@ -1,3 +1,5 @@
+import ProjectUpdate from './ProjectUpdate';
+import SchoolTag from './SchoolTag';
 import Image from 'next/image';
 import type {ReactNode} from 'react';
 import type {ViewProject} from '@/lib/schema';
@@ -15,11 +17,12 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
   return <main id="main" className={s.page}>
     <div className={s.container}>
       <div className={s.back}><Back slug={p.slug}/><span>매장에서 시작한 디지털 실험</span></div>
-      <section className={s.hero} aria-labelledby="case-title">
+      <section className={s.hero} aria-labelledby="case-title"><SchoolTag slug={p.slug}/>
         <p className={s.eyebrow}><span className={s.dot}/> GAYOUNGINE · PREPAY</p>
-        <div className={s.heroHeading}><h1 id="case-title">종이 장부에서,<br/><em>온라인 신청으로.</em></h1><div className={s.heroCopy}><p>{p.title}</p><p>단골의 한 끼를 미리 준비하는 방법.<br/>매장에서 쓰던 선결제 장부를<br/>쉽게 이해하고 신청하는 화면으로 옮겼습니다.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">선결제 사이트 체험하기 <span>↗</span></a></div></div>
-        <div className={s.metadata}><span>개인 고객 · 부서 공동 이용</span><span>반응형 웹</span><span className={s.demoBadge}>화면 체험용 · 실제 결제 미연동</span></div>
+        <div className={s.heroHeading}><h1 id="case-title">종이 장부에서,<br/><em>온라인 신청으로.</em></h1><div className={s.heroCopy}><p>{p.title}</p><p>단골의 한 끼를 미리 준비하는 방법.<br/>매장에서 쓰던 선결제 장부를<br/>쉽게 이해하고 신청하는 화면으로 옮겼습니다.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">현재 선결제 사이트 보기 <span>↗</span></a></div></div>
+        <div className={s.metadata}><span>개인 고객 · 부서 공동 이용</span><span>반응형 웹</span><span className={s.demoBadge}>신청 접수 운영 · 결제·충전 별도</span></div>
       </section>
+      <ProjectUpdate slug={p.slug}/>
     </div>
 
     <section className={s.showcase} aria-label="PC와 모바일에서 보는 선결제 사이트">
@@ -31,8 +34,8 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
           <figcaption>PC · 실제 사이트 화면</figcaption>
         </figure>
         <figure className={s.phoneMock}>
-          <div className={s.phoneFrame}><div className={s.phoneSpeaker} aria-hidden="true"/><iframe src={p.url} title="가영이네 선결제 실제 모바일 화면 체험" loading="lazy" sandbox="allow-scripts allow-same-origin" referrerPolicy="strict-origin-when-cross-origin"/></div>
-          <figcaption>모바일 · 실제 사이트<br/>화면 안에서 스크롤해 보세요.</figcaption>
+          <div className={s.phoneFrame}><div className={s.phoneSpeaker} aria-hidden="true"/><Image src={asset+'desktop.webp'} alt="초기 선결제 화면 기록" width={1348} height={926}/></div>
+          <figcaption>초기 신청 화면 기록<br/>운영 신청은 위 링크에서 별도 진행합니다.</figcaption>
         </figure>
       </div>
     </section>
@@ -67,7 +70,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
       </section>
 
       <section id="prepay-guide" className={s.section}>
-        <Chapter number="04" label="HOW TO USE" title={<>신청부터 확인까지,<br/>이 순서로 체험해요.</>}>예시 정보를 사용하면 실제 개인정보 없이 전체 흐름을 살펴볼 수 있습니다.</Chapter>
+        <Chapter number="04" label="HOW TO USE" title={<>초기 버전에서는,<br/>이 순서로 체험했어요.</>}>아래는 9월 프로토타입의 예시 체험 기록입니다. 현재 운영 사이트에서 시연용 신청은 제출하지 않습니다.</Chapter>
         <ol className={s.steps}>
           <li><span>01</span><h3>이용 방식 선택</h3><p>개인 이용 또는<br/>부서 공동 이용을 선택해요.</p><div className={s.stepVisual}><span>개인 이용</span><span>부서 공동 이용</span></div></li>
           <li><span>02</span><h3>충전 정보 입력</h3><p>‘예시 정보로 체험하기’를 누르고<br/>충전할 번호를 확인해요.</p><div className={s.stepVisual}><span>예시 고객</span><span>010-0000-0000</span></div></li>
@@ -98,13 +101,13 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
 
     <div className={s.container}>
       <section className={s.section}>
-        <Chapter number="07" label="WHERE WE ARE" title={<>지금 체험할 수 있는 것.<br/>다음으로 연결할 것.</>}/>
-        <div className={s.scopeGrid}><div><span className={s.scopeLabel}>지금 · 화면 체험 가능</span><ul><li>개인·부서 공동 이용 신청</li><li>금액별 추가 적립 계산</li><li>신청 내용 확인과 예시 접수</li><li>신청내역과 관리자 상태 변경 체험</li></ul><p>입력 내용은 매장에 전송되지 않으며, 새로고침하면 초기화됩니다.</p></div><div><span className={s.scopeLabel}>다음 · 실제 운영을 위한 연결</span><ul><li>서울페이 비대면 결제 방식 확인</li><li>페이히어 포인트 충전 연동 검토</li><li>고객 인증과 신청 데이터 저장</li><li>결제·충전 결과 알림 연결</li></ul><p>지원 방식과 운영 조건을 확인한 뒤 실제 서비스로 연결할 계획입니다.</p></div></div>
+        <Chapter number="07" label="WHERE WE ARE" title={<>초기 버전에서 구현한 것.<br/>당시 계획했던 것.</>}/>
+        <div className={s.scopeGrid}><div><span className={s.scopeLabel}>2026년 9월 · 화면 체험 범위</span><ul><li>개인·부서 공동 이용 신청</li><li>금액별 추가 적립 계산</li><li>신청 내용 확인과 예시 접수</li><li>신청내역과 관리자 상태 변경 체험</li></ul><p>당시 프로토타입은 입력 내용을 매장에 전송하지 않고, 새로고침하면 초기화하는 방식이었습니다.</p></div><div><span className={s.scopeLabel}>당시 계획 · 실제 운영을 위한 연결</span><ul><li>서울페이 비대면 결제 방식 확인</li><li>페이히어 포인트 충전 연동 검토</li><li>고객 인증과 신청 데이터 저장</li><li>결제·충전 결과 알림 연결</li></ul><p>이후 신청 저장과 텔레그램 알림을 연결했습니다. 최신 운영 과정은 위의 실제 활용 기록에서 확인할 수 있습니다.</p></div></div>
       </section>
       <section className={s.ending}>
-        <p className={s.eyebrow}>SMALL SHOP, REAL EXPERIMENTS</p><h2>장부의 다음 페이지는,<br/>손님이 쓰기 쉬운 화면으로.</h2><p>가영이네 선결제의 첫 번째 디지털 실험을 둘러보세요.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">선결제 사이트 체험하기 <span>↗</span></a><span className={s.endingNotice}>프로토타입 · 실제 결제와 충전은 진행되지 않습니다.</span>
+        <p className={s.eyebrow}>SMALL SHOP, REAL EXPERIMENTS</p><h2>장부의 다음 페이지는,<br/>손님이 쓰기 쉬운 화면으로.</h2><p>가영이네 선결제의 첫 번째 디지털 실험을 둘러보세요.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">현재 선결제 사이트 보기 <span>↗</span></a><span className={s.endingNotice}>현재 사이트는 실제 신청을 접수합니다. 결제와 페이히어 충전은 별도입니다.</span>
       </section>
-      <div className={s.credits}><p>사진: <a href="https://unsplash.com/photos/notebook-pens-pencil-and-coffee-ready-to-write-VUZZs_uzJok" target="_blank" rel="noopener noreferrer">Kelly Sikkema / Unsplash ↗</a> · 이용 상황을 설명하는 참고 이미지입니다.</p><p>PC 화면: 실제 사이트 캡처 · 모바일 화면: 실제 사이트 임베드 · 화면 확인: 2026. 09. 24.</p><Back slug={p.slug}/></div>
+      <div className={s.credits}><p>사진: <a href="https://unsplash.com/photos/notebook-pens-pencil-and-coffee-ready-to-write-VUZZs_uzJok" target="_blank" rel="noopener noreferrer">Kelly Sikkema / Unsplash ↗</a> · 이용 상황을 설명하는 참고 이미지입니다.</p><p>화면 자료: 초기 사이트 캡처 · 화면 확인: 2026. 09. 24.</p><Back slug={p.slug}/></div>
     </div>
   </main>;
 }
