@@ -1,7 +1,8 @@
 /** Public editorial records; operational data and credentials never belong here. */
 export const schoolLabel = '배민아카데미 AI 장사스쿨';
-// Explicit attribution, not an automatic date comparison: the precise first class date is unconfirmed.
-export const schoolSlugs = ['menu-finder','online-prepay','promo-studio','official-site','menu-play','order-call'];
+export const schoolStartDate = '2026-08-27';
+// User-confirmed start date; dated development records establish course-period work.
+export const schoolSlugs = ['menu-finder','online-prepay','promo-studio','official-site','menu-play','order-call','brand-studio','competitor-analysis','voice-recipe'];
 export const presentationOrder = ['menu-finder','online-prepay','promo-studio','official-site','menu-play','order-call'];
 export type WorkRecord = {
  slug:string; title:string; summary:string; category:string; status:string;
