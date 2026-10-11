@@ -1,0 +1,17 @@
+node_modules/
+.next/
+.env
+.env.*
+!.env.example
+*.log
+coverage/
+preview.html
+public/manager.js
+public/manager.css
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.zip
+.DS_Store
