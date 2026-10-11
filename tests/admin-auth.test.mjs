@@ -28,6 +28,9 @@ try{
   const result=await route.POST(req());assert.equal(result.status,200);
   const cookie=result.headers.get('set-cookie');assert.match(cookie,/HttpOnly/i);assert.match(cookie,/SameSite=strict/i);assert.match(cookie,/Max-Age=43200/);
   assert.equal(await route.authorize(req('GET')),null);
+  // Production wraps Request in a proxy: consume public URL/headers only.
+  assert.equal(await route.authorize({url:'https://example.test/api/admin/session',headers:new Headers()}),null);
+  assert.ok(await route.authorize({url:'https://example.test/api/admin/session',headers:new Headers({cookie:cookie.split(';')[0]})}));
   assert.ok(await route.authorize(req('GET',null,'https://example.test',cookie.split(';')[0])));
   process.env.ADMIN_PASSWORD=password+'rotated';assert.equal(await route.authorize(req('GET',null,'https://example.test',cookie.split(';')[0])),null);
   const logout=await route.DELETE(req('DELETE'));assert.match(logout.headers.get('set-cookie'),/Max-Age=0/);
