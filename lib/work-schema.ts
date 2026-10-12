@@ -1,4 +1,6 @@
 import {z} from 'zod';
+import {shareImage} from './share-images.ts';
+import {updates,recentWorks} from './portfolio.ts';
 import type {ViewProject} from './schema.ts';
 export const stages=['미확인','개발 중','개발 완료','개발 종료'] as const;
 export const usages=['미확인','사용 중','테스트 중','사용 안 함'] as const;
@@ -14,5 +16,5 @@ export const workSchema=z.object({
 });
 export type Work=z.infer<typeof workSchema>;
 export type ViewWork=Work & {thumbnailSrc:string;posterSrc:string};
-export function fromProject(p:ViewProject):ViewWork{return {id:p.id,type:'site',name:p.title,description:p.summary,url:p.url,adminUrl:'',stage:'미확인',usage:'미확인',createdDate:'',thumbnail:p.cover,poster:'',prompt:'',notes:'',archived:false,updated_at:null,thumbnailSrc:p.coverSrc,posterSrc:''};}
-export function mergeWorks(projects:ViewProject[],works:ViewWork[]):ViewWork[]{const records=new Map(projects.filter(p=>p.visibility==='published').map(p=>[p.id,fromProject(p)]));for(const w of works)records.set(w.id,w);return [...records.values()];}
+export function fromProject(p:ViewProject):ViewWork{return {id:p.id,type:'site',name:p.title,description:p.summary,url:recentWorks.some(w=>w.slug===p.slug)?recentWorks.find(w=>w.slug===p.slug)!.url||'':updates[p.slug]?.url||p.url,adminUrl:'',stage:'미확인',usage:'미확인',createdDate:'',thumbnail:shareImage(p.slug)||p.cover,poster:'',prompt:'',notes:'',archived:false,updated_at:null,thumbnailSrc:shareImage(p.slug)||p.coverSrc,posterSrc:''};}
+export function mergeWorks(projects:ViewProject[],works:ViewWork[]):ViewWork[]{const records=new Map(projects.filter(p=>p.visibility!=='trash').map(p=>[p.id,fromProject(p)]));for(const w of works){const base=records.get(w.id);const legacy=!!base&&!!w.thumbnail&&projects.some(p=>p.id===w.id&&p.cover===w.thumbnail);records.set(w.id,legacy?{...w,thumbnail:base.thumbnail,thumbnailSrc:base.thumbnailSrc}:w);}return [...records.values()];}

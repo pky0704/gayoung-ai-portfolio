@@ -1,5 +1,6 @@
 import 'server-only';
 import {cache} from 'react';
+import {withEditorialProjects} from './project-catalog';
 import seed from '@/data/projects.json';
 import {configured,service} from './supabase';
 import type {Project,ViewProject} from './schema';
@@ -11,8 +12,8 @@ export async function renderProjects(rows:Project[]):Promise<ViewProject[]>{
  return rows.map(p=>({...p,coverSrc:src(p.cover),screenshotSrcs:p.screenshots.map(src)}));
 }
 export const publicProjects=cache(async function publicProjects(){
- if(!configured())return renderProjects(seed as Project[]);
- const {data,error}=await service().from('projects').select('*').eq('visibility','published').order('sort_order').order('title');
+ if(!configured())return renderProjects(withEditorialProjects(seed as Project[]).filter(p=>p.visibility==='published'));
+ const {data,error}=await service().from('projects').select('*').order('sort_order').order('title');
  if(error)throw new Error('프로젝트를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
- return renderProjects(data as Project[]);
+ return renderProjects(withEditorialProjects(data as Project[]).filter(p=>p.visibility==='published'));
 });

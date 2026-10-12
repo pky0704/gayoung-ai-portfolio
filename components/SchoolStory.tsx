@@ -13,7 +13,7 @@ export default function SchoolStory({availableSlugs}:{availableSlugs:string[]}){
  return <section id="school-story" className="school-story"><div className="shell">
   <div className="school-story-heading"><div><p className="eyebrow">왜 만들었나요?</p><h2>조리와 응대 사이,<br/>반복되는 일을 줄이고 싶었습니다.</h2></div><p>엄마와 둘이 운영하는 분식집에서 메뉴 설명, 선결제 기록, 홍보물 준비에 필요한 도구를 하나씩 만들었습니다.</p></div>
   <div className="story-intro-grid"><article><span>01 · 매장의 불편</span><h3>설명하고 기록할 일이 많았습니다</h3><p>음식을 준비하면서 메뉴를 설명하고, 선결제 장부를 쓰고, 홍보물도 만들어야 했습니다.</p></article><article><span>02 · 사이트 제작</span><h3>필요한 기능부터 만들었습니다</h3><p>AI와 함께 신청서, 메뉴 안내, 홍보 요청문 작성 화면을 만들고 글자와 버튼을 다듬었습니다.</p></article><article><span>03 · 사용 후 개선</span><h3>직접 쓰면서 불편한 점을 고쳤습니다</h3><p>선결제 신청을 매장에서 사용하며 알림과 금액 계산을 보완했습니다. 아직 제작 중인 사이트도 함께 소개합니다.</p></article></div>
-  <div className="presentation-heading"><h3>발표에서 소개할 사이트 6개</h3><p>각 항목을 누르면 만든 이유, 사용 방법, 현재 상태를 볼 수 있습니다.</p></div>
+  <div className="presentation-heading"><h3>발표에서 소개할 사이트 {presentationOrder.filter(slug=>availableSlugs.includes(slug)).length}개</h3><p>각 항목을 누르면 만든 이유, 사용 방법, 현재 상태를 볼 수 있습니다.</p></div>
   <ol className="presentation-list">{presentationOrder.filter(slug=>availableSlugs.includes(slug)).map((slug,i)=><li key={slug}><Link href={'/projects/'+slug}><span>{String(i+1).padStart(2,'0')}</span><div><strong>{projectCopy[slug]?.title}</strong><p>{descriptions[slug]}</p></div><span aria-hidden="true">↗</span></Link></li>)}</ol>
   <p className="school-context-note">‘AI 장사스쿨 참여 중 제작’ 표시는 수업 참여 기간에 만들거나 개선한 개인 프로젝트를 뜻합니다. 공식 과제 여부와는 구분합니다.</p>
   <div className="school-story-actions"><Link href="/?tag=school#projects" className="mint-button">참여 기간에 만든 프로젝트 모두 보기 →</Link><a className="text-link" href="#reflection">매장에서 달라진 점 ↓</a></div>
