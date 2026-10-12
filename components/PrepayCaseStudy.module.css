@@ -27,3 +27,5 @@
 @media(max-width:360px){.phoneMock{width:266px}.phoneFrame{height:494px}.phoneFrame iframe{transform:scale(.6461538462)}}
 .timeline li>span{flex-shrink:0;min-width:32px;white-space:nowrap}
 @media(min-width:701px){.showcaseInner{min-height:890px}.phoneMock figcaption{margin-top:80px}}
+
+.archive{margin-top:20px;border-top:1px solid #ded7ce}.archive>summary{max-width:1100px;width:calc(100% - 40px);margin:0 auto;padding:24px 0;cursor:pointer;font-size:18px;font-weight:700;color:#695c50}.archive>summary:focus-visible{outline:3px solid #b84300;outline-offset:4px}

@@ -25,6 +25,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
       <ProjectUpdate slug={p.slug}/>
     </div>
 
+    <details className={s.archive}><summary>초기 제작 과정 더 보기 · 2026년 9월 기록</summary>
     <section className={s.showcase} aria-label="PC와 모바일에서 보는 선결제 사이트">
       <div className={s.showcaseInner}>
         <div className={s.showcaseLabel}><span>초기 제작 화면 · 2026년 9월</span><span>미리 채우고, 편하게 드세요.</span></div>
@@ -109,5 +110,6 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
       </section>
       <div className={s.credits}><p>사진: <a href="https://unsplash.com/photos/notebook-pens-pencil-and-coffee-ready-to-write-VUZZs_uzJok" target="_blank" rel="noopener noreferrer">Kelly Sikkema / Unsplash ↗</a> · 이용 상황을 설명하는 참고 이미지입니다.</p><p>화면 자료: 초기 사이트 캡처 · 화면 확인: 2026. 09. 24.</p><Back slug={p.slug}/></div>
     </div>
+    </details>
   </main>;
 }
