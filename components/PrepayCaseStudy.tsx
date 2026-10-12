@@ -19,7 +19,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
       <div className={s.back}><Back slug={p.slug}/><span>매장에서 시작한 디지털 실험</span></div>
       <section className={s.hero} aria-labelledby="case-title"><SchoolTag slug={p.slug}/>
         <p className={s.eyebrow}><span className={s.dot}/> GAYOUNGINE · PREPAY</p>
-        <div className={s.heroHeading}><h1 id="case-title">가영이네<br/><em>선결제 신청</em></h1><div className={s.heroCopy}><p>{p.title}</p><p>방문 전에도 선결제를 신청하고<br/>추가 적립 금액을 확인합니다.<br/>결제 확인과 충전은 사장님이 진행합니다.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">현재 선결제 사이트 보기 <span>↗</span></a></div></div>
+        <div className={s.heroHeading}><h1 id="case-title">가영이네<br/><em>선결제 신청</em></h1><div className={s.heroCopy}><p>{p.title}</p><p>방문 전에도 선결제를 신청하고<br/>추가 적립 금액을 확인합니다.<br/>결제 확인과 충전은 사장님이 진행합니다.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">선결제 체험판 열기 <span>↗</span></a></div></div>
         <div className={s.metadata}><span>개인 고객 · 부서 공동 이용</span><span>반응형 웹</span><span className={s.demoBadge}>신청 접수 운영 · 결제·충전 별도</span></div>
       </section>
       <ProjectUpdate slug={p.slug}/>
@@ -35,7 +35,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
         </figure>
         <figure className={s.phoneMock}>
           <div className={s.phoneFrame}><div className={s.phoneSpeaker} aria-hidden="true"/><Image src={asset+'desktop.webp'} alt="초기 선결제 화면 기록" width={1348} height={926}/></div>
-          <figcaption>초기 신청 화면 기록<br/>운영 신청은 위 링크에서 별도 진행합니다.</figcaption>
+          <figcaption>초기 신청 화면 기록<br/>위 링크는 실제 접수가 없는 체험판입니다.</figcaption>
         </figure>
       </div>
     </section>
@@ -105,7 +105,7 @@ export default function PrepayCaseStudy({project:p}:{project:ViewProject}) {
         <div className={s.scopeGrid}><div><span className={s.scopeLabel}>2026년 9월 · 화면 체험 범위</span><ul><li>개인·부서 공동 이용 신청</li><li>금액별 추가 적립 계산</li><li>신청 내용 확인과 예시 접수</li><li>신청내역과 관리자 상태 변경 체험</li></ul><p>당시 프로토타입은 입력 내용을 매장에 전송하지 않고, 새로고침하면 초기화하는 방식이었습니다.</p></div><div><span className={s.scopeLabel}>당시 계획 · 실제 운영을 위한 연결</span><ul><li>서울페이 비대면 결제 방식 확인</li><li>페이히어 포인트 충전 연동 검토</li><li>고객 인증과 신청 데이터 저장</li><li>결제·충전 결과 알림 연결</li></ul><p>이후 신청 저장과 텔레그램 알림을 연결했습니다. 최신 운영 과정은 위의 실제 활용 기록에서 확인할 수 있습니다.</p></div></div>
       </section>
       <section className={s.ending}>
-        <p className={s.eyebrow}>SMALL SHOP, REAL EXPERIMENTS</p><h2>장부의 다음 페이지는,<br/>손님이 쓰기 쉬운 화면으로.</h2><p>가영이네 선결제의 첫 번째 디지털 실험을 둘러보세요.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">현재 선결제 사이트 보기 <span>↗</span></a><span className={s.endingNotice}>현재 사이트는 실제 신청을 접수합니다. 결제와 페이히어 충전은 별도입니다.</span>
+        <p className={s.eyebrow}>SMALL SHOP, REAL EXPERIMENTS</p><h2>장부의 다음 페이지는,<br/>손님이 쓰기 쉬운 화면으로.</h2><p>가영이네 선결제의 첫 번째 디지털 실험을 둘러보세요.</p><a className={s.cta} href={p.url} target="_blank" rel="noopener noreferrer">선결제 체험판 열기 <span>↗</span></a><span className={s.endingNotice}>공개 체험판입니다. 실제 신청·결제·장부 저장·알림은 발생하지 않습니다.</span>
       </section>
       <div className={s.credits}><p>사진: <a href="https://unsplash.com/photos/notebook-pens-pencil-and-coffee-ready-to-write-VUZZs_uzJok" target="_blank" rel="noopener noreferrer">Kelly Sikkema / Unsplash ↗</a> · 이용 상황을 설명하는 참고 이미지입니다.</p><p>화면 자료: 초기 사이트 캡처 · 화면 확인: 2026. 09. 24.</p><Back slug={p.slug}/></div>
     </div>

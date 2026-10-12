@@ -7,4 +7,4 @@ export const editorialProjects:Project[]=recentWorks.map((w,i)=>({
  cover:shareImage(w.slug),screenshots:[],capture_note:'',captured_at:'',problem:w.problem,steps:w.steps.join('\n'),process:w.process,scope:w.current.join('\n'),next:w.next.join('\n'),
  visibility:'published',sort_order:100+i,updated_at:null
 }));
-export function withEditorialProjects(rows:Project[]){return [...rows,...editorialProjects.filter(p=>!rows.some(r=>r.slug===p.slug))];}
+export function withEditorialProjects(rows:Project[]){return [...rows.map(p=>p.slug==='online-prepay'?{...p,url:'https://gayoungene-prepay.vercel.app/demo.html'}:p),...editorialProjects.filter(p=>!rows.some(r=>r.slug===p.slug))];}

@@ -121,7 +121,7 @@
     "summary": "매장에 오지 않아도, 신청부터 충전 확인까지 한 번에.",
     "category": "매장 운영 · 선결제 신청·관리",
     "status": "체험용 프로토타입 · 실제 결제 미연동",
-    "url": "https://gayoungene-prepay.vercel.app/",
+    "url": "https://gayoungene-prepay.vercel.app/demo.html",
     "cover": "/covers/prepay.svg",
     "screenshots": [
       "/captures/prepay.jpg"
