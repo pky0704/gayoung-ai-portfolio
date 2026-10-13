@@ -1,6 +1,6 @@
 /** Plain-language display copy shared by the gallery and detail pages. */
 export const projectCopy:Record<string,{title:string;summary:string}>={
- 'menu-finder':{title:'외국인 메뉴 안내',summary:'외국어로 메뉴 사진과 재료, 매운맛을 확인합니다.'},
+ 'menu-finder':{title:'외국인 메뉴 안내',summary:'키오스크에 없는 재료와 맵기 설명부터, 매장 방문·주문 안내까지.'},
  'online-prepay':{title:'가영이네 선결제 신청',summary:'방문 전에도 신청하고, 추가 적립과 총 충전 예정 금액을 확인합니다. 결제는 별도로 진행합니다.'},
  'brand-studio':{title:'가게 디자인 요청문 만들기',summary:'가게의 색상과 분위기를 정리해 AI에 전달할 디자인 요청문을 만듭니다.'},
  'competitor-analysis':{title:'배달앱 경쟁가게 비교',summary:'가영이네 사례로 다른 가게의 메뉴·가격을 비교하고 개선할 일을 살펴봅니다.'},
