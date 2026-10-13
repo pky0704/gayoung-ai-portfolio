@@ -21,3 +21,9 @@ body:has(.school-page){--orange:#2ac1bc}
 @media(max-width:1023px){.project-grid{gap:24px}.home-intro .hero-bottom{flex-wrap:wrap}.card-summary{min-height:116px}}
 @media(max-width:767px){.home-intro{padding-top:28px;padding-bottom:26px}.home-intro h1{font-size:34px}.home-intro .hero-bottom{align-items:stretch;gap:20px}.home-intro .hero-bottom p{font-size:16px}.school-entry{width:100%}.projects-section{padding-top:28px}.section-heading h2{font-size:27px}.gallery-controls>p{width:100%;font-size:14px}.gallery-filters button{font-size:16px}.project h3,.card-summary{min-height:0}.project-meta{min-height:0;margin-top:8px}.project h3{font-size:24px}.project .status{margin-top:16px}.project-body{padding:18px 20px 14px}.card-links{margin-top:8px}.school-dates ol{grid-template-columns:1fr;gap:26px}.school-page h1{font-size:32px}.school-lead{font-size:17px}.school-toc{gap:8px}.school-page-intro{padding-bottom:18px}.school-page .school-story{padding-block:32px}.school-toc a{padding:10px 12px}.header nav{gap:16px}.work-cover strong{font-size:30px}}
 @media(prefers-reduced-motion:reduce){.project{transition:none}}
+/* Match HTML covers to the 1200 × 720 SVG covers in the same card. */
+.project .cover-link{container-type:inline-size}
+.project .work-cover{padding:5% 6.1667%;font-family:Arial,'Noto Sans KR',sans-serif}
+.project .work-cover>span,.project .work-cover>div{font-size:4.1667cqw;line-height:1.4;letter-spacing:0;font-weight:700}
+.project .work-cover strong{font-size:7.1667cqw;line-height:1.57;letter-spacing:0;font-weight:800}
+.project .work-cover>div>span:last-child{font-size:5cqw}
