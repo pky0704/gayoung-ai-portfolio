@@ -7,7 +7,7 @@ const descriptions:Record<string,string>={
  'promo-studio':'홍보물 제작을 AI에 쉽게 요청하도록',
  'official-site':'가게 소개와 서비스를 한곳에서 찾도록',
  'menu-play':'취향을 선택하며 메뉴를 고르도록',
- 'order-call':'닉네임 기능까지 보완해 실제 매장에서 사용 중',
+ 'order-call':'추가 비용 0원, 닉네임 호출로 단골에게 특별한 경험',
 };
 export default function SchoolStory({availableSlugs}:{availableSlugs:string[]}){
  return <section id="school-story" className="school-story"><div className="shell">
