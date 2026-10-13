@@ -8,7 +8,7 @@ export const dynamic='force-dynamic';
 export default async function Home({searchParams}:{searchParams:Promise<{tag?:string}>}) {
  const [projects,query]=await Promise.all([publicProjects(),searchParams]);
  const additions=recentWorks.filter(w=>projects.some(p=>p.slug===w.slug));
- const entries=[...projects.filter(p=>!recentWorks.some(w=>w.slug===p.slug)).map((p,i)=>({slug:p.slug,school:schoolSlugs.includes(p.slug),progress:false,card:<Card p={p} index={i}/> })),...additions.map((w,i)=>({slug:w.slug,school:schoolSlugs.includes(w.slug),progress:!w.url,card:<RecentWorkCard work={w} index={projects.length-additions.length+i}/> }))];
+ const entries=[...projects.filter(p=>!recentWorks.some(w=>w.slug===p.slug)).map((p,i)=>({slug:p.slug,school:schoolSlugs.includes(p.slug),progress:false,card:<Card p={p} index={i}/> })),...additions.map((w,i)=>({slug:w.slug,school:schoolSlugs.includes(w.slug),progress:!w.url&&!w.inUse,card:<RecentWorkCard work={w} index={projects.length-additions.length+i}/> }))];
  return <main id="main">
   <section className="hero shell home-intro">
    <p className="eyebrow"><span className="orange-dot"/>가영이네 사장 박가영의 포트폴리오</p>

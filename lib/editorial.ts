@@ -9,5 +9,5 @@ export const projectCopy:Record<string,{title:string;summary:string}>={
  'promo-studio':{title:'음식점 홍보 요청문 만들기',summary:'메뉴 정보를 입력하면 홍보 이미지와 글을 만들 때 ChatGPT에 넣을 요청문이 완성됩니다.'},
  'official-site':{title:'가영이네 공식 홈페이지',summary:'가게 소개, 메뉴 안내, 선결제 신청을 한곳에서 찾도록 만들고 있습니다.'},
  'menu-play':{title:'취향으로 고르는 메뉴 게임',summary:'재료·취향·맵기를 선택하면 메뉴를 추천하는 게임을 기획하고 있습니다.'},
- 'order-call':{title:'매장 주문번호 호출',summary:'직원이 입력한 주문번호와 대기시간을 손님에게 알려주는 화면을 개발하고 있습니다.'},
+ 'order-call':{title:'매장 주문번호 호출',summary:'주문번호 호출 사이트에 닉네임 기능을 추가하고 보완을 마쳐, 실제 매장에서 사용하고 있습니다.'},
 };
