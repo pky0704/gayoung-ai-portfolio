@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CompetitorEvidence from './CompetitorEvidence';
 
 type Usage = {question:string; answer:string; status:string; steps:string[]; evidence:string; result:string; image?:string};
 const records:Record<string,Usage> = {
@@ -46,7 +47,7 @@ export default function UsageEvidence({slug}:{slug:string}) {
     <p className="usage-answer">{record.answer}</p>
     <p className="work-status">{record.status}</p>
     <ol className="usage-record-steps">{record.steps.map(step=><li key={step}>{step}</li>)}</ol>
-    {record.image ? <figure className="usage-source-image"><a href={record.image} target="_blank" rel="noopener noreferrer" aria-label="경쟁가게 분석 결과 자료 크게 보기"><Image src={record.image} alt="9월 19일 경쟁가게 분석 결과물 전달자료 4쪽: 핵심 결과 화면과 세트·메뉴 순서·대표 사진 개선 제안" width={1061} height={1500} sizes="(max-width: 700px) 85vw, 600px"/></a><figcaption>기존 결과물 전달자료 4쪽 · 눌러서 크게 보기</figcaption></figure> : null}
+    {slug==='competitor-analysis' ? <CompetitorEvidence/> : record.image ? <figure className="usage-source-image"><a href={record.image} target="_blank" rel="noopener noreferrer"><Image src={record.image} alt="활용 결과 자료" width={1061} height={1500} sizes="(max-width: 700px) 85vw, 600px"/></a></figure> : null}
     <p className="usage-answer">{record.result}</p>
     <p className="evidence-note">{record.evidence}</p>
   </section>;
