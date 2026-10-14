@@ -27,3 +27,5 @@ body:has(.school-page){--orange:#2ac1bc}
 .project .work-cover>span,.project .work-cover>div{font-size:4.1667cqw;line-height:1.4;letter-spacing:0;font-weight:700}
 .project .work-cover strong{font-size:7.1667cqw;line-height:1.57;letter-spacing:0;font-weight:800}
 .project .work-cover>div>span:last-child{font-size:5cqw}
+
+.project-launch{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding-top:24px;padding-bottom:12px}.project-launch span{font-size:14px;color:#625e57}.project-launch a{max-width:100%;overflow-wrap:anywhere}
