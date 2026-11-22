@@ -98,7 +98,7 @@
     "summary": "직접 경험한 맛과 순간을, 글로 옮기기 쉽게.",
     "category": "고객 편의 · 리뷰 작성 지원",
     "status": "공개 리뷰 작성 지원 도구",
-    "url": "https://gayoung-review-helper.ghghgh0704.chatgpt.site",
+    "url": "https://gayoung-review-helper.vercel.app",
     "cover": "/covers/review-helper.svg",
     "screenshots": [
       "/captures/review-helper.jpg"
