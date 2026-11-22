@@ -238,7 +238,7 @@ export const caseStudies:Record<string,CaseStudy> = {
   'voice-recipe': {
     theme:'paper',eyebrow:'VOICE TO RECIPE',headline:['말로 전해지던 조리법을,','다시 꺼내 보는 기록으로.'],
     lead:'조리하며 설명한 내용을 재료와 순서로 정리하고, 다시 확인할 수 있는 레시피로 남기려는 프로젝트입니다. 현재 공개 화면은 테스트 계정 로그인입니다.',
-    audience:'조리법을 기록하고 전수하는 운영자',cta:'테스트 로그인 화면 보기',contextTitle:['말로 설명하던 조리법을','문서로 남기고 싶었습니다'],
+    audience:'조리법을 기록하고 전수하는 운영자',cta:'레시피 정리 예시 보기',contextTitle:['말로 설명하던 조리법을','문서로 남기고 싶었습니다'],
     photoAlt:'주방에서 냄비를 저으며 조리하는 사람. 말로 설명하는 조리 과정을 표현한 참고 사진',photoAuthor:'Jason Briscoe',photoUrl:'https://unsplash.com/photos/woman-cooking-inside-kitchen-room-7MAjXGUmaPw',
     problems:[{title:'말로 전해지는 노하우',text:'머릿속과 손에 익은 조리법을 다른 사람이 다시 볼 수 있는 기록으로 남기고 싶었습니다.'},{title:'다시 확인할 수 있는 순서',text:'재료의 양과 넣는 순서가 긴 설명 안에 섞여 있으면 필요한 내용을 찾기 어렵습니다.'},{title:'고치며 쌓아가는 레시피',text:'처음 정리한 내용을 실제 조리 과정과 대조하고 수정할 수 있어야 합니다.'}],
     question:'“편하게 말한 조리법을, 재료와 순서를 확인할 수 있는 기록으로 남길 수 있다면?”',

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>가영이네 주문번호 호출 체험</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;padding:20px;font:16px/1.5 system-ui,sans-serif;background:#fff8ee;color:#2a201c}
+    main{margin:auto;max-width:750px}a{color:#8d3300}h1{margin:.3em 0;font-size:clamp(25px,7vw,38px)}p{margin:.55em 0;overflow-wrap:anywhere}
+    .badge{font-weight:700;color:#8d3300}.panel{background:#fff;border:1px solid #efdfce;border-radius:18px;padding:18px;margin:14px 0;min-width:0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    label{display:block;margin:.65em 0 .25em;font-weight:700}input,button{font:inherit;min-height:44px;border-radius:10px;padding:8px 10px}
+    input{width:100%;border:1px solid #bcab9d}button{border:1px solid #9e3801;background:#9e3801;color:#fff;cursor:pointer}
+    button:disabled{opacity:.65;cursor:wait}button.secondary{background:white;color:#8d3300}.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .screen{display:grid;align-content:center;justify-items:center;min-height:205px;background:#302620;color:#fff;text-align:center}
+    .screen strong{font-size:clamp(40px,15vw,85px);line-height:1.05}.screen p{min-height:1.5em}.muted{font-size:.92em;color:#614e42}
+    [hidden]{display:none!important}@media(max-width:590px){.grid{grid-template-columns:1fr}body{padding:14px}}
+    @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+  </style>
+  <script src="/demos/order-call.js" defer></script>
+</head>
+<body>
+<main>
+  <a href="/projects/order-call" id="story">가영이네 주문 호출 제작 이야기</a>
+  <p class="badge">배민 AI 쇼케이스 · 공개 체험</p>
+  <h1 id="title">가영이네 주문번호 호출</h1>
+  <p id="intro">예시 주문번호로 직원용 호출과 고객용 표시를 체험합니다. 실제 주문에는 연결되지 않습니다.</p>
+  <div class="grid">
+    <form class="panel" id="controls">
+      <strong>직원용</strong>
+      <label for="number">예시 주문번호</label><input id="number" value="0127" inputmode="numeric" maxlength="6" pattern="[0-9]{1,6}" required autocomplete="off">
+      <label for="nickname">예시 닉네임</label><input id="nickname" value="체험 손님" maxlength="16" autocomplete="off">
+      <div class="actions"><button type="submit">완료 · 호출</button><button type="button" class="secondary" id="reset">초기화</button></div>
+    </form>
+    <section class="panel screen" aria-label="고객용 화면" aria-live="polite">
+      <span id="state">호출 대기</span><strong id="called">—</strong><p id="called-nickname"></p>
+    </section>
+  </div>
+  <section class="panel" aria-label="고객용 기기 연결">
+    <div class="actions"><button type="button" class="secondary" id="sound">소리 켜기</button><button type="button" class="secondary" id="pair">다른 기기에 고객 화면 열기</button></div>
+    <div id="pairing" hidden>
+      <label for="display-url">다른 기기에 보낼 고객용 링크</label><input id="display-url" readonly>
+      <div class="actions"><button type="button" id="copy">링크 복사</button><a id="open" target="_blank" rel="noopener">고객 화면 새창으로 열기</a></div>
+    </div>
+    <p class="muted" id="feedback" role="status"></p>
+  </section>
+</main>
+</body>
+</html>

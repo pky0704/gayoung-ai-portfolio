@@ -21,3 +21,20 @@ test('선결제 공개 링크는 DB 주소와 무관하게 체험판으로 연�
  assert.equal(projected.visibility,'hidden');
  assert.equal(row.url,'https://gayoungene-prepay.vercel.app/');
 });
+
+test('기존에 저장된 공개 도구 주소를 Vercel 운영 주소로 표시',()=>{
+ const oldUrls={
+  'brand-studio':'https://brand-prompt-studio.ghghgh0704.chatgpt.site',
+  'competitor-analysis':'https://gayoungene-competitor-ai.ghghgh0704.chatgpt.site',
+  'voice-recipe':'https://voice-recipe-mvp.ghghgh0704.chatgpt.site',
+  'order-call':'https://gayoungene-order-call.ghghgh0704.chatgpt.site',
+  'official-site':'https://www.gayoungene.com/'
+ };
+ const old=Object.entries(oldUrls).map(([slug,url])=>({...editorialProjects[0],slug,url}));
+ const projects=withEditorialProjects(old);
+ for(const row of old){
+  const published=projects.find(p=>p.slug===row.slug)!;
+  assert.match(published.url,/^https:\/\/[^/]+\.vercel\.app\//);
+  assert.notEqual(published.url,row.url);
+ }
+});
